@@ -16,6 +16,6 @@ public interface BlogRepository extends CrudRepository<Blog, Integer> {
 
 	//void delete(int blogId);
 
-	//List<Blog> findAll();
+	List<Blog> findAll();
 
 }

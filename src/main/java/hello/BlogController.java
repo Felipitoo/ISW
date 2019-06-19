@@ -23,10 +23,15 @@ public class BlogController {
         return blogRepository.findOne(blogId);
     }*/
 
-    @PostMapping("/blog/search")
+    @PostMapping(value="/blog/search")
     public List<Blog> search(@RequestBody Map <String, String> body){
         String searchTerm = body.get("text");
         return blogRepository.findByTitleContainingOrContentContaining(searchTerm, searchTerm);
+    }
+
+    @RequestMapping(value = "/blog", method = RequestMethod.GET)
+    public List<Blog> welcome() {
+     return blogRepository.findAll();
     }
 
     /*
