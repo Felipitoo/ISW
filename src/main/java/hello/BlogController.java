@@ -12,16 +12,16 @@ public class BlogController {
     @Autowired
     BlogRepository blogRepository;
 
-    @GetMapping("/blog")
+    /*@GetMapping("/blog")
     public List<Blog> index(){
         return blogRepository.findAll();
-    }
+    }*/
 
-    @GetMapping("/blog/{id}")
+    /*@GetMapping("/blog/{id}")
     public Blog show(@PathVariable String id){
         int blogId = Integer.parseInt(id);
         return blogRepository.findOne(blogId);
-    }
+    }*/
 
     @PostMapping("/blog/search")
     public List<Blog> search(@RequestBody Map <String, String> body){
@@ -29,6 +29,7 @@ public class BlogController {
         return blogRepository.findByTitleContainingOrContentContaining(searchTerm, searchTerm);
     }
 
+    /*
     @PutMapping("/blog/{id}")
     public Blog update(@PathVariable String id, @RequestBody Map<String, String> body){
         int blogId = Integer.parseInt(id);
@@ -36,13 +37,13 @@ public class BlogController {
         blog.setTitle(body.get("tittle"));
         blog.setContent(body.get("content"));
         return blogRepository.save(blog);
-    }
-
+    }*/
+    /*
     @DeleteMapping("blog/{id}")
     public boolean delete(@PathVariable String id){
         int blogId = Integer.parseInt(id);
         blogRepository.delete(blogId);
         return true;
-    }
+    }*/
 
 }

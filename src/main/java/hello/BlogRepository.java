@@ -12,10 +12,10 @@ public interface BlogRepository extends CrudRepository<Blog, Integer> {
 
     List<Blog> findByTitleContainingOrContentContaining(String text, String textAgain);
 
-	Blog findOne(int blogId);
+	//Blog findOne(int blogId);
 
-	void delete(int blogId);
+	//void delete(int blogId);
 
-	List<Blog> findAll();
+	//List<Blog> findAll();
 
 }
