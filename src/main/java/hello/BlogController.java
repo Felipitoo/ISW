@@ -1,12 +1,15 @@
 package hello;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.ui.Model;
+
 
 import java.util.List;
 import java.util.Map;
 
-@RestController
+@Controller
 public class BlogController {
 
     @Autowired
@@ -30,8 +33,9 @@ public class BlogController {
     }
 
     @RequestMapping(value = "/blog", method = RequestMethod.GET)
-    public List<Blog> welcome() {
-     return blogRepository.findAll();
+    public String welcome(Model model) {
+        model.addAttribute("blogs", blogRepository.findAll());
+        return "blog";
     }
 
     /*
