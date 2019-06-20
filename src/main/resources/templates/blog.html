@@ -1,25 +1,52 @@
-<!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>Getting Started: Serving Web Content</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-<p th:text="'Hello, !'" />
-</body>
-<tbody>
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Active</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="greeting">Greeting Button!!!</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+    </nav>
+
+
     <tr th:if="${blogs.empty}">
-            <td colspan="2"> No Books Available </td>
-        </tr>
-        <tr th:each="blog : ${blogs}">
-                <div class="card" style="width:400px">
-                    <img class="card-img-top" src="https://steamuserimages-a.akamaihd.net/ugc/966474717666925980/864E1761B041C732CFE00FF6C9228AB0E18FF166/" alt="Card image">
+        <td colspan="2"> No Books Available </td>
+    </tr>
+    <tr th:each="blog : ${blogs}">
+        <div class="container">                       
+            <div class="card" style="width:400px">
+                <img class="card-img-top" src="https://i.pinimg.com/280x280_RS/0a/bf/bd/0abfbdaa2908cc475b953ccb417c66e3.jpg" alt="Card image" style="width:100%">
                     <div class="card-body">
-                            <td><span th:text="${blog.title}"> Title </span></td>
-                            <br></br>
-                            <td><span th:text="${blog.content}"> Content </span></td>
+                        <td><span th:text="${blog.title}"> Title </span></td>
+                        <br></br>
+                        <td><span th:text="${blog.content}"> Content </span></td>
                     </div>
-                </div>
-        </tr>
-    </tbody>
+            </div>
+        </div> 
+                      
+    </tr>
+</body>
 </html>
