@@ -39,7 +39,7 @@ public class BlogController {
     public Blog update(@PathVariable String id, @RequestBody Map<String, String> body){
         int blogId = Integer.parseInt(id);
         Blog blog = blogRepository.findOne(blogId);
-        blog.setTitle(body.get("tittle"));
+        blog.setTitle(body.get("title"));
         blog.setContent(body.get("content"));
         return blogRepository.save(blog);
     }*/

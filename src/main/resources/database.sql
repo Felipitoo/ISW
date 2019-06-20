@@ -24,7 +24,7 @@ DROP TABLE IF EXISTS `blog`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `blog` (
   `id` int(6) unsigned NOT NULL AUTO_INCREMENT,
-  `tittle` varchar(500) NOT NULL,
+  `title` varchar(500) NOT NULL,
   `content` varchar(5000) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
