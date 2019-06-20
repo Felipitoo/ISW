@@ -35,18 +35,23 @@
     <tr th:if="${blogs.empty}">
         <td colspan="2"> No Books Available </td>
     </tr>
+    <div class="card-deck">                       
     <tr th:each="blog : ${blogs}">
-        <div class="container">                       
-            <div class="card" style="width:400px">
+            <div class="card bg" style="width:400px">
                 <img class="card-img-top" src="https://i.pinimg.com/280x280_RS/0a/bf/bd/0abfbdaa2908cc475b953ccb417c66e3.jpg" alt="Card image" style="width:100%">
                     <div class="card-body">
-                        <td><span th:text="${blog.title}"> Title </span></td>
+                        <span th:text="${blog.title}"> Title </span>
                         <br></br>
-                        <td><span th:text="${blog.content}"> Content </span></td>
+                        <span th:text="${blog.content}"> Content </span>
                     </div>
-            </div>
-        </div> 
-                      
+            </div>             
     </tr>
+</div> 
+
 </body>
+
+
+
+
 </html>
+
