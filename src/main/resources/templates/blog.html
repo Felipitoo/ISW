@@ -7,21 +7,19 @@
 <body>
 <p th:text="'Hello, !'" />
 </body>
-<table>
-    <thead>
-        <tr>
-            <th> Title </th>
-            <th> Content </th>
-        </tr>
-    </thead>
-    <tbody>
+<tbody>
     <tr th:if="${blogs.empty}">
             <td colspan="2"> No Books Available </td>
         </tr>
         <tr th:each="blog : ${blogs}">
-            <td><span th:text="${blog.title}"> Title </span></td>
-            <td><span th:text="${blog.content}"> Content </span></td>
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="https://steamuserimages-a.akamaihd.net/ugc/966474717666925980/864E1761B041C732CFE00FF6C9228AB0E18FF166/" alt="Card image">
+                    <div class="card-body">
+                            <td><span th:text="${blog.title}"> Title </span></td>
+                            <br></br>
+                            <td><span th:text="${blog.content}"> Content </span></td>
+                    </div>
+                </div>
         </tr>
     </tbody>
-</table>
 </html>
