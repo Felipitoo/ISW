@@ -18,7 +18,7 @@ public class ClienteRest {
 
     @GetMapping("/all")
     public ModelAndView devolverTodos(){
-        ModelAndView mav = new ModelAndView("template");
+        ModelAndView mav = new ModelAndView("notas");
         RestTemplate rest = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
         HttpEntity entity = new HttpEntity(headers);
