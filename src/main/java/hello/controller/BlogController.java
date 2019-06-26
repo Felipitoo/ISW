@@ -1,8 +1,12 @@
-package hello;
+package hello.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import hello.repository.BlogRepository;
+import hello.entity.Blog;
+
 import org.springframework.ui.Model;
 
 

@@ -1,6 +1,9 @@
-package hello;
+package hello.repository;
 
 import org.springframework.stereotype.Repository;
+
+import hello.entity.Blog;
+
 import org.springframework.data.repository.CrudRepository;
 
 
