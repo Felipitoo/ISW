@@ -21,7 +21,7 @@ public class ClienteRest {
         ModelAndView mav = new ModelAndView("notas");
         RestTemplate rest = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
-        HttpEntity entity = new HttpEntity(headers);
+        HttpEntity<String> entity = new HttpEntity<String>(headers);
         ResponseEntity<Nota[]> notasEntity = rest.exchange("http://localhost:8000/v1/notas",
                                 HttpMethod.GET, entity, Nota[].class);
         Nota[] notas = notasEntity.getBody();

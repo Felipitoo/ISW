@@ -27,7 +27,7 @@ CREATE TABLE `blog` (
   `title` varchar(500) NOT NULL,
   `content` varchar(5000) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +36,33 @@ CREATE TABLE `blog` (
 
 LOCK TABLES `blog` WRITE;
 /*!40000 ALTER TABLE `blog` DISABLE KEYS */;
+INSERT INTO `blog` VALUES (5,'Giorno Giovanna','Gold Experience'),(6,'Bruno Buccellati','Sticky Fingers'),(7,'Guido Mista','Sex Pistols'),(8,'Narancia Ghirga','Aerosmith'),(9,'Leona Abbacchio','Moody Blues'),(10,'Pannacotta Fugo','Purple Haze'),(11,'Thrish Una','Spice Girl'),(12,'Jotaro Kujoh','Star Platinum');
 /*!40000 ALTER TABLE `blog` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `nota`
+--
+
+DROP TABLE IF EXISTS `nota`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `nota` (
+  `id2` int(6) unsigned NOT NULL,
+  `status` varchar(500) NOT NULL,
+  PRIMARY KEY (`id2`),
+  CONSTRAINT `FK_statusID` FOREIGN KEY (`id2`) REFERENCES `blog` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `nota`
+--
+
+LOCK TABLES `nota` WRITE;
+/*!40000 ALTER TABLE `nota` DISABLE KEYS */;
+INSERT INTO `nota` VALUES (5,'ALIVE'),(6,'dead'),(7,'alive'),(8,'dead'),(9,'dead'),(10,'alive'),(11,'alive'),(12,'alive');
+/*!40000 ALTER TABLE `nota` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -48,4 +74,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-06-19 18:26:40
+-- Dump completed on 2019-06-26 20:12:35
