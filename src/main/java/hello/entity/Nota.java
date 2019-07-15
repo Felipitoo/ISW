@@ -7,63 +7,40 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
 
-@Table(name="NOTA")
+@Table(name="nota")
 @Entity
 public class Nota implements Serializable {
     private static final long serialVersionUID = 1L;
 
     public Nota() {
     }
-    public Nota(long id, String nombre, String titulo, String contenido){
-        this.id = id;
-        this.nombre = nombre;
-        this.titulo = titulo;
-        this.contenido = contenido;
+    public Nota(long id2, String status){
+        this.id2 = id2;
+        this.status = status;
     }
 
     @GeneratedValue
     @Id
-    @Column(name="ID_NOTA")
-    private long id;
+    @Column(name="id2")
+    private long id2;
 
-    @Column(name="NOMBRE")
-    private String nombre;
+    @Column(name="status")
+    private String status;
 
-    @Column(name="TITULO")
-    private String titulo;
-
-    @Column(name="CONTENIDO")
-    private String contenido;
 
     public long getId() {
-        return id;
+        return id2;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setId(long id2) {
+        this.id2 = id2;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getStatus() {
+        return status;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getContenido() {
-        return contenido;
-    }
-
-    public void setContenido(String contenido) {
-        this.contenido = contenido;
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

@@ -39,9 +39,9 @@ public class NotaService {
         }
     }
 
-    public boolean borrar(String nombre, long id){
+    public boolean borrar(String status, long id2){
         try{
-            Nota nota = repositorio.findByNombreAndId(nombre, id);
+            Nota nota = repositorio.findByStatusAndId2(status, id2);
             repositorio.delete(nota);
             return true;
         }catch(Exception e){
@@ -51,14 +51,6 @@ public class NotaService {
 
     public List<MNota> obtener(){
         return convertidor.convertirLista(repositorio.findAll());
-    }
-
-    public MNota obtenerPorNombreTitulo(String nombre, String titulo){
-        return new MNota(repositorio.findByNombreAndTitulo(nombre, titulo));
-    }
-
-    public List<MNota> obtenerTitulo(String titulo){
-        return convertidor.convertirLista(repositorio.findByTitulo(titulo));
     }
 
     public List<MNota> obtenerPorPaginacion(Pageable pageable){
