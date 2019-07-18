@@ -1,10 +1,6 @@
 package hello.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 @Table(name="nota")
@@ -23,6 +19,12 @@ public class Nota implements Serializable {
     @Id
     @Column(name="id2")
     private long id2;
+
+    // cuando se tenga que hacer un insert, no se le pasa el id, se le pasa el obejeto como foranea
+    // cuando cree la nota, debo pasarle el objeto blog, no la id.
+    @ManyToOne
+    @JoinColumn(name = "id")
+    private Blog id;
 
     @Column(name="status")
     private String status;

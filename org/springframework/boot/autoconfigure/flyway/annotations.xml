@@ -1,0 +1,5 @@
+<root>
+    <item name='org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration.FlywayConfiguration org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer flywayInitializer(org.flywaydb.core.Flyway)'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>
