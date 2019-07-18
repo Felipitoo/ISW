@@ -1,9 +1,7 @@
 package hello.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class Blog {
@@ -13,6 +11,10 @@ public class Blog {
 
     private String title;
     private String content;
+    // para definir foraneas
+    // id2 primaria de la que me quiero conectar :C
+    @OneToMany(mappedBy="id2", cascade = CascadeType.ALL)
+    private Set<Nota> notas;
 
     public Blog() { }
 

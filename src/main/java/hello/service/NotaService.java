@@ -38,7 +38,7 @@ public class NotaService {
             return false;
         }
     }
-
+    /*
     public boolean borrar(String status, long id2){
         try{
             Nota nota = repositorio.findByStatusAndId2(status, id2);
@@ -48,12 +48,16 @@ public class NotaService {
             return false;
         }
     }
-
+    */
+    public List <MNota> buscar_notas() {
+        List<MNota> lista_notas = convertidor.convertirLista(repositorio.findAll());
+        return lista_notas;
+    }
     public List<MNota> obtener(){
         return convertidor.convertirLista(repositorio.findAll());
     }
 
-    public List<MNota> obtenerPorPaginacion(Pageable pageable){
-        return convertidor.convertirLista(repositorio.findAll(pageable).getContent());
+    public List<MNota> obtenerPorPaginacion(){
+        return convertidor.convertirLista(repositorio.findAll());
     }
 } 

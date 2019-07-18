@@ -37,14 +37,9 @@ public class NotaController {
         return service.actualizar(nota);
     }
 
-    @DeleteMapping("/nota/{id2}/{status}")
-    public boolean borrarNota(@PathVariable("id2") long id2, @PathVariable("status") String status){
-        return service.borrar(status, id2);
-    }
-
     @GetMapping("/notas")
-    public List<MNota> obtenerNotas(Pageable pageable){
-        return service.obtenerPorPaginacion(pageable);
+    public List<MNota> obtenerNotas(){
+        return service.obtenerPorPaginacion();
     }
 }
 

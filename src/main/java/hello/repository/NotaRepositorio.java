@@ -12,7 +12,7 @@ import hello.entity.Nota;
 public interface NotaRepositorio extends JpaRepository<Nota, Serializable>,
                                             PagingAndSortingRepository<Nota, Serializable>{
     public abstract Nota findByStatus(String status);
-    public abstract Nota findByStatusAndId2(String status, long id2);
-    public abstract Nota findById2(long id2);
-    public abstract Page<Nota> findAll(Pageable pageable);
+    //public abstract Nota findByStatusAndId2(String status, long id2);
+    //public abstract Nota findById2(long id2);
+    //public abstract Page<Nota> findAll(Pageable pageable);
 }
