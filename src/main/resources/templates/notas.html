@@ -19,15 +19,15 @@
 </head>
 
 <body>
-    <tr th:if="${notas.empty}">
+    <tr th:if="${musers.empty}">
         <td colspan="2"> No Jojos :c </td>
     </tr>
     <div class="card-deck">                       
-    <tr th:each="nota : ${notas}">
+    <tr th:each="user : ${musers}">
             <div class="card bg" style="width:400px">
                 <img class="card-img-top" src="https://i.pinimg.com/280x280_RS/0a/bf/bd/0abfbdaa2908cc475b953ccb417c66e3.jpg" alt="Card image" style="width:100%">
                     <div class="card-body">
-                        <span th:text="${nota.status}"> status </span>
+                        <span th:text="${user.name}"> status </span>
                     </div>
             </div>             
     </tr>
