@@ -23,11 +23,13 @@
 
         .h1 {
             font-weight: bold;
-            margin: 50px;
+            margin: 38px;
+
         }
 
         .CreateAccount{
             margin: 36px;
+            color: #FFFFFF;
         }
 
         h2 {
@@ -51,6 +53,7 @@
             font-size: 14px;
             text-decoration: none;
             margin: 15px 0;
+            padding: 5px;
         }
 
         .button {
@@ -64,6 +67,7 @@
             letter-spacing: 1px;
             text-transform: uppercase;
             transition: transform 80ms ease-in;
+
         }
 
         button:active {
@@ -221,16 +225,6 @@
             transform: translateX(20%);
         }
 
-        .social-container a {
-            border: 1px solid #DDDDDD;
-            border-radius: 50%;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 5px;
-            height: 40px;
-            width: 40px;
-        }
 
     </style>
 
@@ -243,24 +237,24 @@
     </div>
     <div class="form-container sign-in-container">
         <form action="#">
-            <h1 class="h1">Sign In</h1>
+            <h1 class="h1">Ingresar</h1>
             <input type="email" name="email" placeholder="Email">
-            <input type="password" name="password" placeholder="Password">
-            <a href="#">Forgot Your Password</a>
+            <input type="password" name="password" placeholder="Contraseña">
+            <a href="#">¿Olvidó su contraseña?</a>
 
-            <button class="button">Sign In</button>
+            <button class="button">Ingresar</button>
 
         </form>
     </div>
     <div class="overlay-container">
         <div class="overlay">
             <div class="overlay-panel overlay-right">
-                <h1 class="h1 CreateAccount">Create Account</h1>
-                <input type="text" name="name" placeholder="Name">
+                <h1 class="h1 CreateAccount">Crear cuenta</h1>
+                <input type="text" name="name" placeholder="Nombre de Usuario">
                 <input type="email" name="email" placeholder="Email">
-                <input type="password" name="password" placeholder="Password">
+                <input type="password" name="password" placeholder="Contraseña">
 
-                <button class="button buttonSignup">SignUp</button>
+                <button class="button buttonSignup">Crear cuenta</button>
 
             </div>
         </div>
